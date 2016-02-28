@@ -1,0 +1,59 @@
+{
+  "name": "angular-lazy-image",
+  "version": "0.1.0",
+  "description": "The main goal of this directive is to show a way how we can implement the 'Medium blur effect'.",
+  "main": "index.js",
+  "pre-commit": [
+    "lint:eslint",
+    "test"
+  ],
+  "scripts": {
+    "server": "webpack-dev-server --progress --colors --display-error-details",
+    "build": "NODE_ENV=production webpack -p",
+    "test": "karma start",
+    "lint": "npm run lint:eslint && npm run lint:sass",
+    "lint:eslint": "eslint --ext=js ./src/",
+    "lint:sass": "scss-lint src/"
+  },
+  "keywords": [
+    "angularjs",
+    "es6",
+    "es2015",
+    "canvas",
+    "image"
+  ],
+  "author": "Alexander N. Ein",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.5.0",
+    "angular-mocks": "^1.5.0",
+    "babel": "^6.5.2",
+    "babel-core": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-loader": "^6.2.3",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "bundle-loader": "^0.5.4",
+    "css-loader": "^0.23.1",
+    "eslint-config-angular": "^0.5.0",
+    "eslint-plugin-angular": "^1.0.0",
+    "file-loader": "^0.8.5",
+    "html-loader": "^0.4.3",
+    "isparta-instrumenter-loader": "^1.0.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-coverage": "^0.5.3",
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs2-launcher": "^0.5.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.24",
+    "karma-webpack": "^1.7.0",
+    "ng-annotate-webpack-plugin": "^0.1.2",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "scss-lint": "0.0.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

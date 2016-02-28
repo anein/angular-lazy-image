@@ -1,0 +1,51 @@
+$animation-duration: 2s;
+/*
+ Animation frames
+*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.lazy-content {
+  position: relative;
+  width   : 400px;
+  height  : 200px;
+
+  .lazy-image,
+  .lazy-canvas {
+    display   : block;
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    width     : 100%;
+    height    : 100%;
+    box-sizing: border-box;
+    z-index   : 100;
+  }
+
+  .lazy-image {
+    -webkit-animation-name     : fadeIn;
+    animation-name             : fadeIn;
+    -webkit-animation-duration : $animation-duration;
+    animation-duration         : $animation-duration;
+    -webkit-animation-fill-mode: linear;
+    animation-fill-mode        : linear;
+    z-index                    : 101;
+  }
+}
